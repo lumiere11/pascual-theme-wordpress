@@ -196,6 +196,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .contact__list .icon { width: 46px; height: 46px; padding: 12px; border-radius: 50%; background: var(--blue-soft); color: var(--link); }
 .contact__list strong { display: block; font-size: .85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
 .contact__list a { font-weight: 600; font-size: 1.1rem; text-decoration: none; }
+.contact__list span { display: block; }
+.made .contact__list { margin-top: 0; }
 .form { background: var(--tint); padding: clamp(1.3rem, 3vw, 2.2rem); border-radius: var(--radius); border: 1px solid var(--line); }
 .field { margin-bottom: 1rem; }
 .field-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; }

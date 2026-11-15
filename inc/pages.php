@@ -15,6 +15,7 @@ function pascual_inner_pages() {
 		'certificaciones' => 'certificaciones',
 		'reconocimientos' => 'reconocimientos',
 		'donde-comprar-mexico' => 'donde-comprar',
+		'exportaciones'   => 'exportaciones',
 	);
 }
 

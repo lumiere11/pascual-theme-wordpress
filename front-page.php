@@ -56,7 +56,7 @@ $labels  = array(
 			<?php endforeach; ?>
 		</div>
 		<button class="ctrl" type="button" data-next aria-label="Marca siguiente"><?php echo pascual_icon( 'next' ); // phpcs:ignore ?></button>
-		<button class="ctrl ctrl--pause" type="button" data-pause aria-pressed="false" aria-label="Pausar carrusel">❚❚</button>
+		<button class="ctrl ctrl--pause" type="button" data-pause aria-pressed="false" aria-label="Pausar carrusel"><?php echo pascual_icon( 'pause' ) . pascual_icon( 'play' ); // phpcs:ignore ?></button>
 	</div>
 </section>
 

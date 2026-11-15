@@ -114,6 +114,8 @@ function pascual_icon( $name ) {
 		'flag'      => '<path d="M5 3v18M5 4h12l-2 4 2 4H5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
 		'moon'      => '<path d="M20.500 14.500A8.500 8.500 0 0 1 9.500 3.500a8.500 8.500 0 1 0 11 11z"/>',
 		'sun'       => '<circle cx="12" cy="12" r="4.500"/><path d="M12 2v2.500M12 19.500V22M2 12h2.500M19.500 12H22M4.900 4.900l1.800 1.800M17.300 17.300l1.800 1.800M4.900 19.100l1.800-1.800M17.300 6.700l1.800-1.800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
+		'pause'     => '<path d="M7 5h3.500v14H7zM13.500 5H17v14h-3.500z"/>',
+		'play'      => '<path d="M8 5l11 7-11 7z"/>',
 		'gear'      => '<path d="M12 8.500A3.500 3.500 0 1 0 12 15.500 3.500 3.500 0 0 0 12 8.500zm8.500 4.500-1.600.9a7 7 0 0 1 0 1.200l1.600.9-1.500 2.600-1.800-.5a7 7 0 0 1-1 .6L15.800 21h-3l-.4-1.800a7 7 0 0 1-1-.6l-1.800.5-1.500-2.600 1.600-.9a7 7 0 0 1 0-1.200L7 12l1.500-2.600 1.800.5a7 7 0 0 1 1-.6L12.800 7h3l.4 1.800a7 7 0 0 1 1 .6l1.800-.5z" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linejoin="round"/>',
 	);
 	if ( ! isset( $icons[ $name ] ) ) {

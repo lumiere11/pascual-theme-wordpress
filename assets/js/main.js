@@ -113,7 +113,6 @@
 			pauseBtn.addEventListener('click', function () {
 				userPaused = !userPaused;
 				pauseBtn.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
-				pauseBtn.textContent = userPaused ? '▶' : '❚❚';
 				pauseBtn.setAttribute('aria-label', userPaused ? 'Reanudar carrusel' : 'Pausar carrusel');
 				start();
 			});

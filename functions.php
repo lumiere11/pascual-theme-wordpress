@@ -59,6 +59,15 @@ function pascual_data() {
 }
 
 /**
+ * Modo oscuro: aplica el tema antes de pintar la página para que no parpadee.
+ * Usa la elección guardada del visitante; si no hay, la del dispositivo.
+ */
+function pascual_theme_boot() {
+	echo "<script>(function(){var t;try{t=localStorage.getItem('pascual-theme');}catch(e){}if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>\n"; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+add_action( 'wp_head', 'pascual_theme_boot', 0 );
+
+/**
  * Colores de marca como tokens CSS (--brand-boing, --brand-boing-ink, ...), tomados de pascual_data().
  */
 function pascual_brand_tokens() {
@@ -103,6 +112,8 @@ function pascual_icon( $name ) {
 		'close'     => '<path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round"/>',
 		'leaf'      => '<path d="M20 4C10 4 4 9 4 15c0 2 1 4 2.500 5 .5-4 3-8 8-10-4 3-6 6-6.500 10.500C14 21 20 17 20 4z"/>',
 		'flag'      => '<path d="M5 3v18M5 4h12l-2 4 2 4H5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>',
+		'moon'      => '<path d="M20.500 14.500A8.500 8.500 0 0 1 9.500 3.500a8.500 8.500 0 1 0 11 11z"/>',
+		'sun'       => '<circle cx="12" cy="12" r="4.500"/><path d="M12 2v2.500M12 19.500V22M2 12h2.500M19.500 12H22M4.900 4.900l1.800 1.800M17.300 17.300l1.800 1.800M4.900 19.100l1.800-1.800M17.300 6.700l1.800-1.800" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>',
 		'gear'      => '<path d="M12 8.500A3.500 3.500 0 1 0 12 15.500 3.500 3.500 0 0 0 12 8.500zm8.500 4.500-1.600.9a7 7 0 0 1 0 1.200l1.600.9-1.500 2.600-1.800-.5a7 7 0 0 1-1 .6L15.800 21h-3l-.4-1.800a7 7 0 0 1-1-.6l-1.800.5-1.500-2.600 1.600-.9a7 7 0 0 1 0-1.200L7 12l1.500-2.600 1.800.5a7 7 0 0 1 1-.6L12.800 7h3l.4 1.800a7 7 0 0 1 1 .6l1.800-.5z" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linejoin="round"/>',
 	);
 	if ( ! isset( $icons[ $name ] ) ) {

@@ -29,6 +29,12 @@ La página con slug `donde-comprar-mexico` muestra el directorio de sucursales y
 - **Villahermosa** va sin dirección: en el sitio original repite la de Tizayuca. Agregar la correcta en `pascual_sucursales()`.
 - La portada dice 30 sucursales y el directorio tiene 26. Ajustar la cifra en `pascual_data()` o completar la lista.
 
+## Exportaciones (v1.5)
+La página con slug `exportaciones` usa `template-parts/exportaciones.php`. La del sitio original está vacía, así que solo dice lo publicado en el comunicado "Plan de expansión 2019-2020": exportación a Estados Unidos y relaciones comerciales en exploración con Centro y Sudamérica. Faltan y hay que pedir a la Cooperativa:
+- Países a los que se exporta hoy y qué marcas.
+- Correo o teléfono del área de exportaciones (por ahora usa el contacto general).
+- Si el dato de 2019 sigue vigente.
+
 ## Pendientes a revisar
 - **Frases de marca inventadas**: el sitio no tenía lema para Lulu ("Más sabor para compartir"). Revisar también los textos de introducción de cada marca.
 - **Cifras de Nosotros**: el sitio original mostraba 0 en trabajadores y plantas; usé las cifras de la portada.

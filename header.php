@@ -61,6 +61,10 @@ $d = pascual_data();
 			?>
 			<a class="btn btn--primary nav__cta" href="<?php echo esc_url( $d['order_url'] ); ?>" target="_blank" rel="noopener">Hacer un pedido</a>
 		</nav>
+
+		<button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambiar a modo oscuro" hidden>
+			<?php echo pascual_icon( 'moon' ) . pascual_icon( 'sun' ); // phpcs:ignore ?>
+		</button>
 	</div>
 </header>
 

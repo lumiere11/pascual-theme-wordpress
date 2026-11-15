@@ -11,6 +11,29 @@
 		window.addEventListener('scroll', onScroll, { passive: true });
 	}
 
+	/* Modo claro / oscuro: el <head> ya puso data-theme; aquí va el botón */
+	var root = document.documentElement;
+	var themeBtn = document.querySelector('[data-theme-toggle]');
+	if (themeBtn) {
+		var KEY = 'pascual-theme';
+		var mq = window.matchMedia('(prefers-color-scheme: dark)');
+		var stored = function () { try { return localStorage.getItem(KEY); } catch (e) { return null; } };
+		var applyTheme = function (t) {
+			root.setAttribute('data-theme', t);
+			themeBtn.setAttribute('aria-label', t === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro');
+		};
+		applyTheme(root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+		themeBtn.hidden = false;
+		themeBtn.addEventListener('click', function () {
+			var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+			applyTheme(next);
+			try { localStorage.setItem(KEY, next); } catch (e) { /* sin almacenamiento: dura solo esta página */ }
+		});
+		/* Sin elección guardada, sigue al dispositivo si cambia */
+		var follow = function (e) { if (!stored()) { applyTheme(e.matches ? 'dark' : 'light'); } };
+		if (mq.addEventListener) { mq.addEventListener('change', follow); } else if (mq.addListener) { mq.addListener(follow); }
+	}
+
 	/* Menú móvil + submenús */
 	var toggle = document.querySelector('.nav-toggle');
 	var nav = document.getElementById('menu-principal');

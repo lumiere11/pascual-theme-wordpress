@@ -25,7 +25,7 @@ include get_theme_file_path( 'template-parts/product-hero.php' );
 	?>
 	<section class="section" id="presentaciones">
 		<div class="wrap">
-			<header class="section__head section__head--left">
+			<header class="section__head">
 				<h2>Tres tamaños</h2>
 				<p><?php echo esc_html( $packet ); ?> en todos.</p>
 			</header>
@@ -42,7 +42,7 @@ include get_theme_file_path( 'template-parts/product-hero.php' );
 
 	<section class="section section--tint" id="sabores">
 		<div class="wrap">
-			<header class="section__head section__head--left">
+			<header class="section__head">
 				<h2>Con sabor</h2>
 				<p>En presentación de <?php echo esc_html( $pres[1]['size'] ); ?>.</p>
 			</header>

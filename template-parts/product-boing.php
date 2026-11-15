@@ -20,7 +20,7 @@ include get_theme_file_path( 'template-parts/product-hero.php' );
 
 	<section class="section" id="presentaciones">
 		<div class="wrap">
-			<header class="section__head section__head--left">
+			<header class="section__head">
 				<h2>Escoge tu sabor</h2>
 				<p>Más de 10 sabores, en tres presentaciones.</p>
 			</header>

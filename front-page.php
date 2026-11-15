@@ -107,31 +107,21 @@ $labels  = array(
 	</div>
 </section>
 
-<!-- PRODUCCIÓN -->
+<!-- PRODUCCIÓN + GALERÍA -->
 <section class="section section--tint" id="produccion">
-	<div class="wrap split">
-		<div class="split__media">
-			<img src="<?php echo pascual_img( 'produccion.webp' ); // phpcs:ignore ?>" alt="Línea de producción de la Cooperativa Pascual" width="1200" height="1200" loading="lazy" decoding="async">
-		</div>
-		<div class="split__body">
-			<h2>Fruta natural, pulpa propia</h2>
-			<p>Somos una empresa 100&nbsp;% mexicana con más de 50 años de experiencia. Procesamos nuestros productos con fruta natural de la más alta calidad y elaboramos nuestra propia pulpa.</p>
-			<dl class="facts">
-				<div><dt>Fruta</dt><dd>Natural, de origen nacional.</dd></div>
-				<div><dt>Pulpa</dt><dd>La procesamos nosotros, con equipo moderno.</dd></div>
-				<div><dt>Experiencia</dt><dd>Pioneros en nuestro campo, con más de 50 años.</dd></div>
-			</dl>
-			<a class="btn btn--primary" href="<?php echo esc_url( $base . 'boing/#proceso' ); ?>">Ver cómo se elabora</a>
-		</div>
-	</div>
-</section>
-
-<!-- GALERÍA -->
-<section class="section" id="galeria">
 	<div class="wrap">
-		<header class="section__head">
-			<h2>Así se hace Pascual</h2>
-		</header>
+		<div class="made">
+			<h2>Fruta natural, pulpa propia</h2>
+			<div class="made__body">
+				<dl class="facts">
+					<div><dt>Fruta</dt><dd>Natural, de origen nacional.</dd></div>
+					<div><dt>Pulpa</dt><dd>La procesamos nosotros, con equipo moderno.</dd></div>
+					<div><dt>Experiencia</dt><dd>Pioneros en nuestro campo, con más de 50 años.</dd></div>
+				</dl>
+				<a class="btn btn--primary" href="<?php echo esc_url( $base . 'boing/#proceso' ); ?>">Ver cómo se elabora</a>
+			</div>
+		</div>
+		<h3 class="screen-reader-text" id="galeria">Así se hace Pascual</h3>
 		<ul class="gallery">
 			<?php foreach ( $d['gallery_alt'] as $i => $alt ) : ?>
 				<li>

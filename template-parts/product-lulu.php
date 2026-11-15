@@ -21,7 +21,7 @@ include get_theme_file_path( 'template-parts/product-hero.php' );
 	<?php $x = $pres[0]; ?>
 	<section class="section" id="presentaciones">
 		<div class="wrap">
-			<header class="section__head section__head--left">
+			<header class="section__head">
 				<h2>Elige un sabor</h2>
 				<p><?php echo esc_html( $x['name'] . ' ' . $x['size'] ); ?> · <?php echo esc_html( mb_strtolower( $x['packaging'] ) ); ?></p>
 			</header>

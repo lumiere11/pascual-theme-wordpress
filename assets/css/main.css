@@ -144,7 +144,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .section--blue { background: var(--blue); color: #eaf3fc; }
 .section--blue h2 { color: var(--white); }
 .section--yellow { --heading: #0b2a4a; --ink: #14263a; --muted: #5a6b7d; --red-text: #c8102e; --link: #004c94; --bg: #ffffff; color: var(--ink); background: var(--yellow); padding-block: clamp(2.2rem, 5vw, 3.5rem); }
-.section__head { text-align: center; max-width: 640px; margin: 0 auto 2.5rem; }
+.section__head { max-width: 40rem; margin: 0 0 2.2rem; }
 
 .brand-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.2rem; }
 .brand-card { display: flex; flex-direction: column; align-items: center; gap: .7rem; text-decoration: none; color: var(--heading); font: 600 1.05rem var(--font-head); transition: color .2s; text-align: center; }
@@ -162,6 +162,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .stat__hint { display: block; font-size: .9rem; color: var(--muted); }
 
 
+.made { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 5vw, 4.5rem); align-items: start; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.made .facts { margin-top: 0; }
+@media (max-width: 900px) { .made { grid-template-columns: minmax(0, 1fr); } }
 .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .gallery__item { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: var(--radius); overflow: hidden; }
 .gallery__item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
@@ -176,7 +179,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .buy p { margin: 0; }
 .buy__actions { display: flex; gap: .8rem; flex-wrap: wrap; }
 
-.coop-grid { display: grid; grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid var(--line); max-width: 760px; margin-inline: auto; }
+.coop-grid { display: grid; grid-template-columns: minmax(0, 1fr); border-bottom: 1px solid var(--line); max-width: 760px; }
 .coop-grid a { position: relative; display: block; padding: 1.3rem 3rem 1.3rem 0; border-top: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: color .2s; }
 .coop-grid a:hover { color: var(--red-text); }
 .coop-grid strong { display: block; font: 600 1.25rem var(--font-head); color: var(--heading); }
@@ -348,7 +351,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .recipe p { margin: 0; color: var(--muted); font-size: .95rem; }
 .brand-grid--small { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .brand-grid--small .brand-card img { max-width: 130px; }
-.prose--center { text-align: center; }
+.prose--center { margin-inline: 0; }
 
 /* Nosotros */
 .mv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.4rem; margin-bottom: 1rem; }
@@ -538,7 +541,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ==========================================================
    Boing: estantes de sabores · Pato Pascual: dos tamaños
    ========================================================== */
-.section__head--left { text-align: left; margin: 0 0 2.2rem; max-width: 40rem; }
 
 /* Boing */
 .shelf { padding-block: 2rem; border-top: 1px solid var(--line); }

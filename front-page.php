@@ -28,7 +28,6 @@ $labels  = array(
 			<p class="hero__lede">Elaboramos refrescos, aguas y leche con fruta natural y pulpa propia. Una empresa 100&nbsp;% mexicana, de trabajadores y para las familias.</p>
 			<div class="hero__actions">
 				<a class="btn btn--solid" href="#marcas">Ver productos</a>
-				<a class="btn btn--ghost" href="<?php echo esc_url( $d['order_url'] ); ?>" target="_blank" rel="noopener">Hacer un pedido</a>
 			</div>
 		</div>
 

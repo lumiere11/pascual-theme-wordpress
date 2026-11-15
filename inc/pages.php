@@ -14,6 +14,7 @@ function pascual_inner_pages() {
 		'historia'        => 'historia',
 		'certificaciones' => 'certificaciones',
 		'reconocimientos' => 'reconocimientos',
+		'donde-comprar-mexico' => 'donde-comprar',
 	);
 }
 
@@ -111,4 +112,64 @@ function pascual_trofeos() {
 		'Trofeo Querétaro',
 		'Trofeo Verde',
 	);
+}
+
+/**
+ * Dónde comprar: plantas y sucursales.
+ * Datos tomados de pascual.com.mx/donde-comprar-mexico (nombre, dirección, teléfono y enlace al mapa).
+ * 'state' lo agregamos para agrupar. Villahermosa va sin dirección: en el sitio original
+ * repite la de Tizayuca; falta confirmar la correcta.
+ */
+function pascual_plantas() {
+	return array(
+		array( 'name' => 'Planta San Juan del Río', 'state' => 'Querétaro', 'address' => 'Paseo Central No. 36, Fracc. Industrial Valle de Oro, C.P. 76802, San Juan del Río, Querétaro', 'tel' => '4272725544', 'map' => 'https://maps.app.goo.gl/FPiBGFPk19QqiQws5' ),
+		array( 'name' => 'Planta Tizayuca', 'state' => 'Hidalgo', 'address' => 'Av. de las Diligencias No. 7, Colonia Tepojaco, C.P. 43810, Tizayuca, Hidalgo', 'tel' => '7797969210', 'map' => 'https://maps.app.goo.gl/K4yj9Q8SWvVGPekD8' ),
+	);
+}
+
+function pascual_sucursales() {
+	return array(
+		array( 'name' => 'Acapulco', 'state' => 'Guerrero', 'address' => 'Carretera Cayaco Pto. Marquez No. 40 Col. Piedra Roja, C.P. 39704', 'tel' => '7444683092', 'map' => 'https://maps.app.goo.gl/Dymm9Sw27HULMicn8' ),
+		array( 'name' => 'Aguascalientes', 'state' => 'Aguascalientes', 'address' => 'Gregorio Ruiz V. 203, Cd. Industrial, Aguascalientes, C.P. 20290', 'tel' => '4499710757', 'map' => 'https://maps.app.goo.gl/XegJVBZ3PJpEUp2L7' ),
+		array( 'name' => 'Atlacomulco', 'state' => 'Estado de México', 'address' => 'Silencio #200 Esq. J. Ma. Morelos. Santiago Acutzilapan, Atlacomulco, CP. 50483', 'tel' => '7121204428', 'map' => 'https://maps.app.goo.gl/8ZUqxPEKJb3TqrqLA' ),
+		array( 'name' => 'Apizaco', 'state' => 'Tlaxcala', 'address' => 'Heroico Colegio Militar N. 515 Colonia Centro, Apizaco Tlaxcala C.P. 90300', 'tel' => '2414175949', 'map' => 'https://maps.app.goo.gl/chvKrzaMWs352GUh8' ),
+		array( 'name' => 'Ciudad Madero', 'state' => 'Tamaulipas', 'address' => 'Carr. Tampico Mante #417-A Col. Tampico Altamira Cd. Altamira Tam, C.P 89609', 'tel' => '8332102549', 'map' => 'https://maps.app.goo.gl/oFeUGz4Gf25sC5WPA' ),
+		array( 'name' => 'Celaya', 'state' => 'Guanajuato', 'address' => 'Carr. Celaya – Salvatierra Km 3, Fracc. Michinelas, Celaya Gto C.P. 38094', 'tel' => '4616182899', 'map' => 'https://maps.app.goo.gl/Z1KDE43sbXCnWcqc6' ),
+		array( 'name' => 'Cuautla', 'state' => 'Morelos', 'address' => 'Nicolas Bravo Esq. I. Allende N°3 Parque Industrial Cuautla, Mcpio De Ayala,Mor. CP 62715', 'tel' => '7351222439', 'map' => 'https://maps.app.goo.gl/pzTP5cRNgVgXGPkq9' ),
+		array( 'name' => 'Cuernavaca', 'state' => 'Morelos', 'address' => 'Av. Insurgentes No 19-A, Col. Centro C.P. 62550 Jiutepec, Morelos', 'tel' => '7773190745', 'map' => 'https://maps.app.goo.gl/EqEwcnXT2a37RTve9' ),
+		array( 'name' => 'Guadalajara', 'state' => 'Jalisco', 'address' => 'San Pablo No. 100 Colonia Las Pintas CP 45690 El Salto, Jalisco', 'tel' => '3336892330', 'map' => 'https://maps.app.goo.gl/4ry47X1v9fRYCefZ9' ),
+		array( 'name' => 'Iguala', 'state' => 'Guerrero', 'address' => 'Carr. Fed-Iguala Taxco Km. 2.5 Lt.9, Mz. V Col. Cd. Industrial Del Valle De Iguala C.P. 40025', 'tel' => '7333325202', 'map' => 'https://maps.app.goo.gl/SgQ3ehqRxuvx7u7Z7' ),
+		array( 'name' => 'Izúcar de Matamoros', 'state' => 'Puebla', 'address' => 'Bvd. Revolución Barrio Sta. Cruz Tecoxco N°1729 Izucar de Matamoros, Puebla C.P. 74410', 'tel' => '2434365297', 'map' => 'https://maps.app.goo.gl/HjhxcQwwmf2LG1Sx9' ),
+		array( 'name' => 'León', 'state' => 'Guanajuato', 'address' => 'Blvr Saturno #2822 Y 2824 Col. Hacienda San Miguel Guanajuato C.P 37288', 'tel' => '4771028387', 'map' => 'https://maps.app.goo.gl/3ZZVfZePG6rbNktN8' ),
+		array( 'name' => 'Minatitlán', 'state' => 'Veracruz', 'address' => 'Berlin #33, Col. Nueva Mina, C.P. 96760, Minatitlan, Veracruz', 'tel' => '9222212929', 'map' => 'https://maps.app.goo.gl/ZpV8C7ixs9hUkwvc6' ),
+		array( 'name' => 'Monterrey', 'state' => 'Nuevo León', 'address' => 'Morenita Mia #200-A Col. Res. Roble, San Nicolas de los Garza, N.L . C.P. 66414', 'tel' => '8183502480', 'map' => 'https://maps.app.goo.gl/bgyge12Tm5A2ZXhu5' ),
+		array( 'name' => 'Morelia', 'state' => 'Michoacán', 'address' => 'Carpinteros de Paracho #703-B Col. 5 de Mayo, Morelia, Mich, CP. 58230', 'tel' => '4433248692', 'map' => 'https://maps.app.goo.gl/XYv7andb4cjuk9Lr9' ),
+		array( 'name' => 'Pachuca', 'state' => 'Hidalgo', 'address' => 'Av. B L-20 Col. Parque Industrial Canacintra, Mcpio Mineral del Reforma, Hgo. CP. 42181', 'tel' => '7717163720', 'map' => 'https://maps.app.goo.gl/dNtWaQDmNAh2dnp6A' ),
+		array( 'name' => 'Poza Rica', 'state' => 'Veracruz', 'address' => 'Calle Queretaro #500 Col. Mexico. C.P. 93310, Poza Rica de Hidalgo, Veracruz', 'tel' => '7828241015', 'map' => 'https://maps.app.goo.gl/BYmUTLrpXr6Pxdir8' ),
+		array( 'name' => 'Puebla', 'state' => 'Puebla', 'address' => 'Cerrada de San Joaquin N°5 Col. Chachapa C.P 72990, Amozoc De Mota, Puebla', 'tel' => '2222860641', 'map' => 'https://maps.app.goo.gl/HaqBnbQHWX15fbej6' ),
+		array( 'name' => 'Querétaro', 'state' => 'Querétaro', 'address' => 'Av. Paseo Constituyentes #1081, Col. El Pocito Corregidora, Querétaro. C.P.76902', 'tel' => '4422164272', 'map' => 'https://maps.app.goo.gl/fhKGvKfNxTf58eWd8' ),
+		array( 'name' => 'Río Blanco', 'state' => 'Veracruz', 'address' => 'Camino Nacional Num. 7 Colonia Hospitalito Rio Blanco, Veracruz C.P. 94730', 'tel' => '2727275239', 'map' => 'https://maps.app.goo.gl/4N289X7r2xeNAJaL9' ),
+		array( 'name' => 'San Juan del Río', 'state' => 'Querétaro', 'address' => 'Av. Universidad No.325 Col. Granjas Banthi, San Juan Del Rio, Queretaro, C.P. 76805', 'tel' => '4272641412', 'map' => 'https://maps.app.goo.gl/6EkVxcAcpwxur9xo8' ),
+		array( 'name' => 'San Luis Potosí', 'state' => 'San Luis Potosí', 'address' => 'Carr. San Luis Matehuala, No. Km.2-180 Col. Urbana Central de Maquinaria, Soledad Dde Graciano Sanchez, S.L.P. C.P. 78434', 'tel' => '4448166839', 'map' => 'https://maps.app.goo.gl/ZSb5htgWL8iv1iDZ8' ),
+		array( 'name' => 'Tizayuca', 'state' => 'Hidalgo', 'address' => 'Av. de las Diligencias No. 7 Colonia Tepojaco, Tizayuca Hgo. Cp. 43810', 'tel' => '7797969250', 'map' => 'https://maps.app.goo.gl/K4yj9Q8SWvVGPekD8' ),
+		array( 'name' => 'Toluca', 'state' => 'Estado de México', 'address' => 'Av. del Cerrillo Lt. 2 Manzana 1 Parque Industrial El Cerrillo I, Lerma Mexico C.P. 52000', 'tel' => '7282852996', 'map' => 'https://maps.app.goo.gl/LK7jHbjGcE3TPL6D7' ),
+		array( 'name' => 'Tulancingo', 'state' => 'Hidalgo', 'address' => 'Av. Fernando de la Peña #149 Col. Valle Verde C.P.43648 Tulancingo de Bravo Hidalgo', 'tel' => '7757427027', 'map' => 'https://maps.app.goo.gl/YDDpbtSgHLffsTUS7' ),
+		array( 'name' => 'Villahermosa', 'state' => 'Tabasco', 'address' => '', 'tel' => '9931416707', 'map' => 'https://maps.app.goo.gl/MYXsYCkCyb4XJinJ9' ),
+	);
+}
+
+/** Sucursales agrupadas por estado, en orden alfabético. */
+function pascual_sucursales_por_estado() {
+	$out = array();
+	foreach ( pascual_sucursales() as $s ) {
+		$out[ $s['state'] ][] = $s;
+	}
+	uksort( $out, function ( $a, $b ) { return strcmp( remove_accents( $a ), remove_accents( $b ) ); } );
+	return $out;
+}
+
+/** 7444683092 -> 744 468 3092 */
+function pascual_tel_fmt( $tel ) {
+	$t = preg_replace( '/\D/', '', $tel );
+	return 10 === strlen( $t ) ? substr( $t, 0, 3 ) . ' ' . substr( $t, 3, 3 ) . ' ' . substr( $t, 6 ) : $tel;
 }

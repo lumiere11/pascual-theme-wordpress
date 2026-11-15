@@ -129,7 +129,32 @@
 		start();
 	}
 
-		/* Galería: visor ampliado */
+	/* Dónde comprar: filtra sucursales por ciudad o estado */
+	var locator = document.querySelector('[data-locator]');
+	if (locator) {
+		var q = locator.querySelector('[data-loc-q]');
+		var countEl = locator.querySelector('[data-loc-count]');
+		var emptyEl = locator.querySelector('[data-loc-empty]');
+		var groups = Array.prototype.slice.call(locator.querySelectorAll('[data-loc-group]'));
+		var plain = function (s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim(); };
+		var filter = function () {
+			var term = plain(q.value), shown = 0;
+			groups.forEach(function (g) {
+				var any = false;
+				g.querySelectorAll('[data-loc]').forEach(function (li) {
+					var hit = !term || li.getAttribute('data-loc').indexOf(term) !== -1;
+					li.hidden = !hit;
+					if (hit) { any = true; shown++; }
+				});
+				g.hidden = !any;
+			});
+			emptyEl.hidden = shown > 0;
+			countEl.textContent = term ? (shown === 1 ? '1 sucursal' : shown + ' sucursales') : '';
+		};
+		q.addEventListener('input', filter);
+	}
+
+	/* Galería: visor ampliado */
 	var box = document.querySelector('[data-lightbox]');
 	if (box && typeof box.showModal === 'function') {
 		var img = box.querySelector('img');

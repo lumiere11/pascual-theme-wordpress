@@ -681,6 +681,33 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .empty__links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
 
 /* ==========================================================
+   Dónde comprar: directorio de sucursales
+   ========================================================== */
+.finder { max-width: 30rem; margin-bottom: 2.5rem; }
+.finder label { display: block; font-weight: 700; font-size: .92rem; margin-bottom: .35rem; color: var(--heading); }
+.finder input { width: 100%; font: inherit; padding: .85rem 1rem; border-radius: var(--radius); border: 2px solid var(--line); background: var(--surface); color: var(--ink); transition: border-color .2s, box-shadow .2s; }
+.finder input:focus { outline: none; border-color: var(--link); box-shadow: 0 0 0 4px var(--focus-ring); }
+.finder__count { margin: .6rem 0 0; font-size: .92rem; color: var(--muted); min-height: 1.5em; }
+.dir__group { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2rem; padding-block: 1.6rem; border-top: 1px solid var(--line); }
+.dir__group[hidden] { display: none; }
+.dir__state { font-size: 1.25rem; margin: 0; position: sticky; top: 100px; align-self: start; }
+.dir__list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.6rem 2.5rem; }
+.loc[hidden] { display: none; }
+.loc__name { font-size: 1.25rem; margin: 0 0 .2rem; }
+.loc__addr { margin: 0 0 .5rem; color: var(--muted); font-size: .95rem; line-height: 1.45; }
+.loc__links { display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; margin: 0; font-weight: 600; font-size: .98rem; }
+.loc__links a { display: inline-flex; align-items: center; gap: .4rem; text-decoration: none; padding-block: .3rem; }
+.loc__links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.dir__empty { padding-block: 1.6rem; border-top: 1px solid var(--line); max-width: 40rem; }
+@media (max-width: 900px) {
+	.dir__group { grid-template-columns: minmax(0, 1fr); gap: .8rem; }
+	.dir__state { position: static; color: var(--muted); font: 600 .95rem var(--font); }
+}
+@media (max-width: 600px) {
+	.dir__list { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ==========================================================
    Modo oscuro
    El script de <head> pone data-theme en <html> (elección guardada o la
    del dispositivo). El bloque @media cubre a quien navega sin JavaScript.

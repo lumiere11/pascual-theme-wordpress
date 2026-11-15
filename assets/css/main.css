@@ -353,7 +353,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .recipe p { margin: 0; color: var(--muted); font-size: .95rem; }
 .brand-grid--small { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .brand-grid--small .brand-card img { max-width: 130px; }
-.prose--center { margin-inline: 0; }
+/* Cierre de página: alineado con el resto del contenido, con ancho de lectura */
+.wrap.prose--center { max-width: none; }
+.prose--center > * { max-width: 780px; }
 
 /* Nosotros */
 .mv { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.4rem; margin-bottom: 1rem; }

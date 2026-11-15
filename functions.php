@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'PASCUAL_VER', '1.2.0' );
+define( 'PASCUAL_VER', '1.3.0' );
 
 require_once get_template_directory() . '/inc/products.php';
 require_once get_template_directory() . '/inc/pages.php';

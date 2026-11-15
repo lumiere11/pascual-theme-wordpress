@@ -21,6 +21,9 @@ Mismos slugs que el sitio actual: `valores`, `historia`, `certificaciones`, `rec
 - **Reconocimientos**: el sitio original no trae año, organismo ni foto de cada trofeo (solo una). Se muestran los 11 nombres; agregar esos datos en `pascual_trofeos()` cuando existan.
 - **Historia**: ordené los hitos de más antiguo a más reciente y escribí los titulares. Revisar el relato de 1982 con quien corresponda.
 
+## Modo oscuro (v1.3)
+El sitio abre en claro u oscuro según el dispositivo del visitante, y el botón de sol/luna de la cabecera permite cambiarlo; la elección se recuerda en ese navegador. La paleta oscura está al final de `assets/css/main.css` (bloque "Modo oscuro"). Los colores de marca no cambian.
+
 ## Pendientes a revisar
 - **Frases de marca inventadas**: el sitio no tenía lema para Lulu ("Más sabor para compartir"). Revisar también los textos de introducción de cada marca.
 - **Cifras de Nosotros**: el sitio original mostraba 0 en trabajadores y plantas; usé las cifras de la portada.
